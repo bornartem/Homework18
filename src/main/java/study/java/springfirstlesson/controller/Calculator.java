@@ -9,7 +9,11 @@ import study.java.springfirstlesson.service.CalculatorService;
 @RestController
 @RequestMapping("/calculator")
 public class Calculator {
-    private final CalculatorService calculatorService = new CalculatorService();
+    private final CalculatorService calculatorService;
+
+    public Calculator (CalculatorService calculatorService){
+        this.calculatorService = calculatorService;
+    }
     @GetMapping
     public String calculator(){
         return calculatorService.calculator();
