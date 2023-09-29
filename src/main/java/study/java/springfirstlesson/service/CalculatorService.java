@@ -1,9 +1,9 @@
 
 package study.java.springfirstlesson.service;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
+@Service
 public class CalculatorService {
     private int counter = 10;
     public String calculator(){
